@@ -13,7 +13,7 @@ public class Global extends GlobalSettings {
             long now = date.getTime();
             long routeTime = now - Long.valueOf(request.getHeader("x-request-start"));
             if(routeTime < 0) routeTime = 0;
-            System.out.println("at=metric queue=" + routeTime + "ms");
+            System.out.println("at=metric measure=queue-metrics queue_time=" + routeTime + "ms");
         }
        return super.onRequest(request, actionMethod);
     }
